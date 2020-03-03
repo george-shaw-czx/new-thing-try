@@ -1,0 +1,49 @@
+import java.util.Scanner;
+public class subway {
+    public static void main(String[] args) {
+
+            Scanner in = new Scanner(System.in);
+            int price=0;
+            System.out.println("please choose your road(road1,road2,road3)(just wirte the number)");
+            int road_num=in.nextInt();
+            if(road_num==1)
+                price=3;
+            if(road_num==2)
+                price=8;
+            if(road_num==3)
+                price=10;
+            System.out.println("*****************");
+            System.out.print("welcome to the Java subway");
+            System.out.println(road_num+"!");
+            System.out.print("the price is ");
+            System.out.print(price);
+            System.out.println(" dollar");
+            System.out.println("*****************");
+            System.out.println("toss your coin here");
+            int money=in.nextInt();
+            while(money<price)
+            {
+                System.out.print("you need pay more money: ");
+                System.out.print(price-money);
+                System.out.println(" dollar");
+                System.out.println("toss your coin here");
+                money+=in.nextInt();
+            }
+            if(money==price)
+            {
+                System.out.println("it's perfect ,there are no charges.");
+            }
+            else
+            {
+                System.out.println("here are your charges: ");
+                System.out.print(money-price);
+                System.out.println(" dollars");
+            }
+            System.out.println("here are your tickle:");
+            System.out.println("********************************");
+            System.out.println("the subway "+road_num+" welcome your coming");
+            System.out.println("the price is "+price);
+            System.out.println("********************************");
+            in.close();
+    }
+}
